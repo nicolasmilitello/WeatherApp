@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow:600");
+
+.background {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerCity {
+  height: 80vh;
+  width: 60vw;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  .containerCity {
+    position: relative;
+    top: 12%;
+    height: 35vw;
+    width: 90vw;
+  }
+}
+
+.ciudadDia {
+  width: 90%;
+  height: 95%;
+  margin-top: 20px;
+  color: white;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(159, 160, 189, 0.075);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+}
+
+.ciudadNoche {
+  width: 90%;
+  height: 95%;
+  margin-top: 20px;
+  color: white;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(159, 160, 189, 0.075);
+  box-shadow: 20px 20px 60px #363749, -20px -20px 60px #363749;
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.cityName {
+  font-family: "Barlow";
+  font-weight: 600;
+}
+
+.locationIcon {
+  font-size: 36px;
+  position: relative;
+  top: -10.5px;
+  -webkit-animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.9s both;
+}
+
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.info {
+  /* position: relative;
+  left: -6%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+  height: 30%;
+  gap: 10%;
+}
+
+@media (orientation: portrait) {
+  .info {
+    margin-right: 10%;
+  }
+}
+
+/* @media (orientation: landscape) {
+  .info {
+    left: -1.5%;
+  }
+} */
+
+.weatherIcon {
+  position: relative;
+  top: -15px;
+  font-size: 150px;
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  .weatherIcon {
+    position: relative;
+    top: -15px;
+    font-size: 100px;
+  }
+}
+
+.itemsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 3fr 3fr;
+  gap: 1px 1px;
+  grid-template-areas:
+    ". ."
+    ". ."
+    ". .";
+  margin-left: 10px;
+  margin-right: 7px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  .itemsContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1px 1px 1px 1px;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 98%;
+  height: 90%;
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 191, 255, 0.075);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 1px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 0.7s both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 0.7s both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.gridTitle {
+  font-family: "Barlow";
+  font-size: 12px;
+}
+
+.icon {
+  display: flex;
+  font-size: 20px;
+}
+
+.dataCity {
+  font-size: 16px;
+  width: 100%;
+}
+
+@media (min-width: 1366px) {
+  .dataCity {
+    font-size: 20px;
+  }
+
+  .gridTitle {
+    font-size: 15px;
+  }
+
+  .icon {
+    display: flex;
+    font-size: 25px;
+  }
+}
+
+.buttonContainer {
+  /* margin: 0; */
+  z-index: 1500;
+}
+
+/* @media (min-width: 720px) {
+  .buttonContainer {
+    margin-left: 10%;
+  }
+} */
+
+.closeButton {
+  display: flex;
+  box-shadow: none;
+  background: none;
+  background-color: none;
+  border-radius: 21px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 25px;
+  padding: 0px 0px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #854629;
+}
+.closeButton:hover {
+  transition-duration: 1s;
+  color: #3915bc;
+}
+.closeButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.buttonText {
+  display: flex;
+  align-items: center;
+}

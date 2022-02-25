@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow");
+
+.searchForm {
+  width: 50%;
+}
+
+@media (max-width: 375px) {
+  .searchForm {
+    width: 100%;
+  }
+}
+
+.inputCity {
+  background-color: inherit;
+  border-radius: 10px;
+  border: 1px #0c0431;
+  color: white;
+  font-family: "Barlow";
+  padding: 0;
+}
+
+.addCityButton {
+  box-shadow: none;
+  background: none;
+  background-color: none;
+  border-radius: 21px;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  font-size: 22px;
+  padding: 0px 0px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #854629;
+  margin-left: 2%;
+}
+
+.addCityButton:hover {
+  transition-duration: 1s;
+  color: #40ca00;
+}
+
+.addCityButton:active {
+  position: relative;
+  top: 1px;
+}

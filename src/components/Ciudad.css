@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow:600");
+
+.background {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerCiudad {
+  height: 32vh;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .containerCiudad {
+    height: 45vw;
+    width: 50vw;
+  }
+}
+
+@media (max-width: 1000px) and (orientation: portrait) {
+  .containerCiudad {
+    height: 55vw;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 1300px) and (orientation: landscape) {
+  .containerCiudad {
+    height: 35vw;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 700px) and (orientation: landscape) {
+  .containerCiudad {
+    height: 40vw;
+    width: 90vw;
+  }
+}
+
+/* @media (max-width: 768px) {
+  .containerCiudad {
+    height: 55vw;
+    width: 90vw;
+  }
+} */
+
+@media (max-width: 600px) {
+  .containerCiudad {
+    height: 90vw;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .containerCiudad {
+    height: 100vw;
+    width: 90vw;
+  }
+}
+
+.ciudadDia {
+  width: 90%;
+  height: 95%;
+  margin-top: 20px;
+  color: white;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(159, 160, 189, 0.075);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+}
+
+.ciudadNoche {
+  width: 90%;
+  height: 95%;
+  margin-top: 20px;
+  color: white;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(159, 160, 189, 0.075);
+  box-shadow: 20px 20px 60px #363749, -20px -20px 60px #363749;
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.cityName {
+  font-family: "Barlow";
+  font-weight: 600;
+}
+
+.locationIcon {
+  font-size: 36px;
+  position: relative;
+  top: -15px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  gap: 10%;
+}
+
+.weatherIcon {
+  position: relative;
+  top: -15px;
+  font-size: 150px;
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  .weatherIcon {
+    position: relative;
+    top: -15px;
+    font-size: 100px;
+  }
+}
+
+.itemsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 3fr 3fr;
+  gap: 1px 1px;
+  grid-template-areas:
+    ". ."
+    ". ."
+    ". .";
+  margin-left: 10px;
+  margin-right: 7px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  .itemsContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1px 1px 1px 1px;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 98%;
+  height: 90%;
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 191, 255, 0.075);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 1px rgba(255, 255, 255, 0.4) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+}
+
+.gridTitle {
+  font-family: "Barlow";
+  font-size: 12px;
+}
+
+.icon {
+  display: flex;
+  font-size: 20px;
+}
+
+.buttonContainer {
+  position: absolute;
+  left: 20px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  .buttonContainer {
+    position: absolute;
+    margin-left: 8%;
+    margin-top: 2%;
+  }
+}
+
+@media (max-width: 700px) and (orientation: landscape) {
+  .buttonContainer {
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 2%;
+  }
+}
+
+@media (max-width: 600px) {
+  .buttonContainer {
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 30px;
+  }
+}
+
+.closeButton {
+  box-shadow: none;
+  background: none;
+  background-color: none;
+  border-radius: 21px;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 25px;
+  padding: 0px 0px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #854629;
+}
+.closeButton:hover {
+  transition-duration: 1s;
+  color: #bc3315;
+}
+.closeButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.buttonText {
+  display: flex;
+  align-items: center;
+}
