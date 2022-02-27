@@ -6,7 +6,7 @@ import axios from "axios";
 
 axios.defaults.baseURL =
   process.env.REACT_APP_API ||
-  "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org";
+  "https://cors-anywhere.herokuapp.com/https://api.openweathermap.org";
 
 ReactDOM.render(
   <BrowserRouter>
