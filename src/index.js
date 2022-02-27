@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
 //? COMPONENTS:
-import App from "./containers/App";
+import WeatherApp from "./containers/App";
 
 //? STYLES:
 import "./globalStyle.css";
@@ -11,7 +11,7 @@ import "./normalize.css";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <WeatherApp />
   </BrowserRouter>,
   document.getElementById("root")
 );

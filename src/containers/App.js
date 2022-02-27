@@ -6,11 +6,11 @@ import Nav from "../components/Nav.jsx";
 import Cards from "../components/Cards.jsx";
 
 //? STYLES:
-import "./App.css";
+import { App } from "./AppSC";
 
 const apiKey = "ec401c51d1fe6c01edf63b463f8b5958";
 
-function App() {
+function WeatherApp() {
   const [cities, setCities] = useState([]);
   function onClose(id) {
     setCities((oldCities) => oldCities.filter((c) => c.id !== id));
@@ -58,7 +58,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <App>
       <Nav onSearch={onSearch} />
       <Switch>
         <Route
@@ -67,8 +67,8 @@ function App() {
           render={() => <Cards cities={cities} onClose={onClose} />}
         />
       </Switch>
-    </div>
+    </App>
   );
 }
 
-export default App;
+export default WeatherApp;
