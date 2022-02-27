@@ -3,7 +3,6 @@ import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import Nav from "../components/Nav.jsx";
 import Cards from "../components/Cards.jsx";
-//import axios from "axios";
 
 const apiKey = "4ae2636d8dfbdc3044bede63951a019b";
 
@@ -24,7 +23,6 @@ function App() {
       )
         .then((r) => r.json())
         .then((recurso) => {
-          console.log(recurso);
           if (recurso.main !== undefined) {
             let repeated = cities?.filter((c) => c.id === recurso.id);
             if (repeated.length) {
@@ -49,7 +47,6 @@ function App() {
               setCities((oldCities) => [...oldCities, ciudad]);
             }
           } else {
-            console.log("llegue al error");
             alert("City not found");
           }
         });
