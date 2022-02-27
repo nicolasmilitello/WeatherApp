@@ -7,8 +7,6 @@ import Cards from "../components/Cards.jsx";
 const apiKey = "ec401c51d1fe6c01edf63b463f8b5958";
 
 function App() {
-  console.log(process);
-  console.log(process.env);
   const [cities, setCities] = useState([]);
   function onClose(id) {
     setCities((oldCities) => oldCities.filter((c) => c.id !== id));
