@@ -3,7 +3,6 @@ import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import Nav from "../components/Nav.jsx";
 import Cards from "../components/Cards.jsx";
-import axios from "axios";
 
 const apiKey = "4ae2636d8dfbdc3044bede63951a019b";
 
@@ -19,10 +18,12 @@ function App() {
         "You can not add more than 30 cities. Please delete some of them and try it again."
       );
     } else {
-      axios(`/data/2.5/weather?q=${ciudad}&appid=${apiKey}`)
-        .then((r) => r.data)
+      fetch(
+        `http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`
+      )
+        .then((r) => r.json())
         .then((recurso) => {
-          // console.log(recurso);
+          //console.log(recurso);
           if (recurso.main !== undefined) {
             let repeated = cities?.filter((c) => c.id === recurso.id);
             if (repeated.length) {
