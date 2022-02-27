@@ -1,17 +1,17 @@
 import React from "react";
+
+//? STYLES:
+import "./Ciudad.css";
+
+//? ICONS:
 import { WiHumidity, WiBarometer, WiStrongWind } from "react-icons/wi";
 import {
-  // BsSunrise,
-  // BsSunset,
   BsThermometerHalf,
   BsThermometerSnow,
   BsThermometerSun,
 } from "react-icons/bs";
-//import { FaTemperatureHigh, FaTemperatureLow } from "react-icons/fa";
-//import { AiOutlineCloud } from "react-icons/ai";
 import { IoIosClose } from "react-icons/io";
 import { MdOutlineLocationOn } from "react-icons/md";
-import "./Ciudad.css";
 
 export default function Ciudad(min) {
   // function unixTimeToHours(unixTime) {

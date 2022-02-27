@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
-import "./App.css";
+
+//? COMPONENTS:
 import Nav from "../components/Nav.jsx";
 import Cards from "../components/Cards.jsx";
+
+//? STYLES:
+import "./App.css";
 
 const apiKey = "ec401c51d1fe6c01edf63b463f8b5958";
 

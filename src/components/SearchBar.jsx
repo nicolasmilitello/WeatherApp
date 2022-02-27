@@ -1,6 +1,10 @@
 import React, { useState } from "react";
-import { IoMdAdd } from "react-icons/io";
+
+//? STYLES:
 import "./SearchBar.css";
+
+//? ICONS:
+import { IoMdAdd } from "react-icons/io";
 
 export default function SearchBar({ onSearch }) {
   const [city, setCity] = useState("");

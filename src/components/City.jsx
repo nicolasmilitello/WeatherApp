@@ -1,4 +1,9 @@
 import React from "react";
+
+//? STYLES:
+import "./City.css";
+
+//? ICONS:
 import { WiHumidity, WiBarometer, WiStrongWind } from "react-icons/wi";
 import {
   BsThermometerHalf,
@@ -7,7 +12,6 @@ import {
 } from "react-icons/bs";
 import { BiArrowBack } from "react-icons/bi";
 import { MdOutlineLocationOn } from "react-icons/md";
-import "./City.css";
 
 export default function City(min) {
   return (

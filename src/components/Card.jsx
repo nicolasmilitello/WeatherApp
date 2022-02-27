@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-//import Ciudad from "../components/Ciudad.jsx";
+
+//? COMPONENTS:
 import City from "../components/City.jsx";
+
+//? STYLES:
 import "./Card.css";
+
+//? ICONS:
 import {
   WiDaySunny,
   WiNightClear,
