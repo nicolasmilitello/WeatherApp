@@ -1,7 +1,22 @@
 import React from "react";
 
 //? STYLES:
-import "./City.css";
+import {
+  ContainerCity,
+  ButtonContainer,
+  ReturnButton,
+  MainDataCity,
+  Title,
+  LocationIcon,
+  Name,
+  DataCity,
+  WeatherCityIcon,
+  DetailsContainer,
+  Grid,
+  DetailsIcon,
+  DetailsTitle,
+  DataDetails,
+} from "./CitySC";
 
 //? ICONS:
 import { WiHumidity, WiBarometer, WiStrongWind } from "react-icons/wi";
@@ -15,24 +30,25 @@ import { MdOutlineLocationOn } from "react-icons/md";
 
 export default function City(min) {
   return (
-    <div className="background">
-      <div className="buttonContainer">
-        <button className="closeButton" onClick={(e) => min.handleShow(e)}>
-          <div className="buttonText">
-            <BiArrowBack />
-          </div>
-        </button>
-      </div>
-      <div className="containerCity">
-        <div className="name">
-          <div className="locationIcon">
-            <MdOutlineLocationOn />
-          </div>
-          <h2 className="cityName">{min.name}</h2>
-        </div>
+    <ContainerCity>
+      <ButtonContainer>
+        <ReturnButton onClick={(e) => min.handleShow(e)}>
+          <BiArrowBack />
+        </ReturnButton>
+      </ButtonContainer>
 
-        <div className="info">
-          <div className="weatherIcon">{min.img}</div>
+      <MainDataCity>
+        <Title>
+          <LocationIcon>
+            <MdOutlineLocationOn />
+          </LocationIcon>
+
+          <Name>{min.name}</Name>
+        </Title>
+
+        <DataCity>
+          <WeatherCityIcon>{min.img}</WeatherCityIcon>
+
           <div>
             <div>
               {Math.floor(min.temp - 273) < 12 ? (
@@ -44,42 +60,42 @@ export default function City(min) {
             <div>{Math.floor(min.temp - 273)}ºC</div>
             <div>{min.weather}</div>
           </div>
-        </div>
+        </DataCity>
 
-        <div className="itemsContainer">
-          <div className="grid">
-            <div className="icon">
+        <DetailsContainer>
+          <Grid>
+            <DetailsIcon>
               <BsThermometerHalf />
-              <div className="gridTitle">Feels like</div>
-            </div>
-            <div className="dataCity">{Math.floor(min.feelsLike - 273)} ºC</div>
-          </div>
+              <DetailsTitle>Feels like</DetailsTitle>
+            </DetailsIcon>
+            <DataDetails>{Math.floor(min.feelsLike - 273)} ºC</DataDetails>
+          </Grid>
 
-          <div className="grid">
-            <div className="icon">
+          <Grid>
+            <DetailsIcon>
               <WiHumidity />
-              <div className="gridTitle">Humidity</div>
-            </div>
-            <div className="dataCity">{min.humidity} %</div>
-          </div>
+              <DetailsTitle>Humidity</DetailsTitle>
+            </DetailsIcon>
+            <DataDetails>{min.humidity} %</DataDetails>
+          </Grid>
 
-          <div className="grid">
-            <div className="icon">
+          <Grid>
+            <DetailsIcon>
               <WiBarometer />
-              <div className="gridTitle">Pressure</div>
-            </div>
-            <div className="dataCity">{min.pressure} hPa</div>
-          </div>
+              <DetailsTitle>Pressure</DetailsTitle>
+            </DetailsIcon>
+            <DataDetails>{min.pressure} hPa</DataDetails>
+          </Grid>
 
-          <div className="grid">
-            <div className="icon">
+          <Grid>
+            <DetailsIcon>
               <WiStrongWind />
-              <div className="gridTitle">Wind</div>
-            </div>
-            <div className="dataCity">{min.wind} km/h</div>
-          </div>
-        </div>
-      </div>
-    </div>
+              <DetailsTitle>Wind</DetailsTitle>
+            </DetailsIcon>
+            <DataDetails>{min.wind} km/h</DataDetails>
+          </Grid>
+        </DetailsContainer>
+      </MainDataCity>
+    </ContainerCity>
   );
 }

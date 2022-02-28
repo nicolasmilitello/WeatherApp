@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 //? COMPONENTS:
-import City from "../components/City.jsx";
+import City from "../components/City";
 
 //? STYLES:
 import {

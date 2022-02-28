@@ -19,11 +19,19 @@
   --hoverCloseButtonCard: #f33d14;
   --hoverDetailsButtonDayCard: rgb(231, 230, 253);
   --hoverDetailsButtonNightCard: rgba(1, 0, 56);
+  --returnButtonColor: white;
+  --hoverReturnButton: #231261;
+  --detailsColor: white;
+  --detailsGridBackgroundColor: rgba(0, 191, 255, 0.075);
+  --shadowDetailsGridColor: rgba(0, 0, 0, 0.3);
+  --borderDetailsGridColor: rgba(255, 255, 255, 0.4);
+  --borderBottomAndRightDetailsGridColor: rgba(40, 40, 40, 0.35);
 
   --logoFont: "Germania One", sans-serif;
   --InitialMessageAddCitiesFont: "Barlow", sans-serif;
   --inputFont: "Barlow";
   --TitleCardFont: "Barlow";
+  --cityDetailsFont: "Barlow";
 }
 
 body {
