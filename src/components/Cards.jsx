@@ -25,9 +25,6 @@ export default function Cards({ cities, onClose }) {
               feelsLike={c.feelsLike}
               humidity={c.humidity}
               pressure={c.pressure}
-              // clouds={c.clouds}
-              // sunrise={c.sunrise}
-              // sunset={c.sunset}
               onClose={() => onClose(c.id)}
             />
           ))}
