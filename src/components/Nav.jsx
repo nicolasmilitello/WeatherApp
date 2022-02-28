@@ -4,16 +4,16 @@ import React from "react";
 import SearchBar from "./SearchBar.jsx";
 
 //? STYLES:
-import "./Nav.css";
+import { SuperContainer, Container, Logo } from "./NavSC";
 
 function Nav({ onSearch }) {
   return (
-    <div className="superContainer">
-      <nav className="navContainer">
-        <span className="appName">WeatherApp</span>
+    <SuperContainer>
+      <Container>
+        <Logo>WeatherApp</Logo>
         <SearchBar onSearch={onSearch} />
-      </nav>
-    </div>
+      </Container>
+    </SuperContainer>
   );
 }
 

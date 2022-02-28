@@ -1,9 +1,10 @@
 :root {
   --logoNavColor: white;
+  --messageAddCities: black;
+  --borderColorCardsAndNav: rgba(40, 40, 40, 0.35);
 }
 
 body {
-  margin: 0;
   background-image: url("./img/pexels-pixabay-209831.jpg");
   background-attachment: scroll;
 }
