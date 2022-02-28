@@ -8,10 +8,22 @@
   --inputFontColor: white;
   --addButtonColor: white;
   --hoverAddButton: #40ca00;
+  --borderCardColor: rgba(255, 255, 255, 0.4);
+  --borderBottomAndRightCardColor: rgba(40, 40, 40, 0.35);
+  --backgroundDayCard: rgba(143, 154, 240, 0.2);
+  --shadowDayCard: rgba(175, 167, 218, 0.3);
+  --backgroundNightCard: rgba(5, 0, 71, 0.2);
+  --shadowNightCard: rgba(1, 0, 56, 0.3);
+  --buttonDayColor: black;
+  --buttonNightColor: white;
+  --hoverCloseButtonCard: #f33d14;
+  --hoverDetailsButtonDayCard: rgb(231, 230, 253);
+  --hoverDetailsButtonNightCard: rgba(1, 0, 56);
 
   --logoFont: "Germania One", sans-serif;
   --InitialMessageAddCitiesFont: "Barlow", sans-serif;
-  --inputFont: "Barlow", sans-serif;
+  --inputFont: "Barlow";
+  --TitleCardFont: "Barlow";
 }
 
 body {

@@ -4,7 +4,16 @@ import React, { useState } from "react";
 import City from "../components/City.jsx";
 
 //? STYLES:
-import "./Card.css";
+import {
+  Container,
+  Icon,
+  CloseButton,
+  CardBody,
+  CardTitle,
+  Data,
+  WeatherIcon,
+  DetailsButton,
+} from "./CardSC";
 
 //? ICONS:
 import {
@@ -37,14 +46,11 @@ export default function Card({
   feelsLike,
   humidity,
   pressure,
-  // clouds,
-  // sunrise,
-  // sunset,
   onClose,
   id,
 }) {
   let dayOrNight = img[2];
-  // console.log(dayOrNight);
+
   if (img.charAt(2) === "d") {
     switch (img) {
       case "01d":
@@ -117,48 +123,40 @@ export default function Card({
   }
 
   return (
-    <div className={dayOrNight === "d" ? "dayCard" : "nightCard"}>
-      <div id="closeIcon" className="row">
-        <div className="buttonContainerHome">
-          <button
-            className={
-              dayOrNight === "d" ? "closeButtonHomeDay" : "closeButtonHomeNight"
-            }
-            onClick={onClose}
-          >
-            <div className="buttonTextHome">
-              <IoIosClose />
-            </div>
-          </button>
-        </div>
-      </div>
-      <div className="card-body">
-        <h5 className="card-title">{name}</h5>
+    <Container day={dayOrNight === "d" ? 1 : 0}>
+      <Icon>
+        <CloseButton day={dayOrNight === "d" ? 1 : 0} onClick={onClose}>
+          <IoIosClose />
+        </CloseButton>
+      </Icon>
 
-        <div className="data">
-          <div className="col-sm-4 col-md-4 col-lg-4">
+      <CardBody>
+        <CardTitle>{name}</CardTitle>
+
+        <Data>
+          <div>
             <FaTemperatureLow />
             <p>{min - 273}°C</p>
           </div>
-          <div className="col-sm-4 col-md-4 col-lg-4">
+
+          <div>
             <FaTemperatureHigh />
             <p>{max - 273}°C</p>
           </div>
-          <div className="col-sm-4 col-md-4 col-lg-4">
-            <div className="iconoClima">{img}</div>
+
+          <div>
+            <WeatherIcon>{img}</WeatherIcon>
           </div>
-        </div>
-        <div>
-          <button
-            className={
-              dayOrNight === "d" ? "detailsButtonDay" : "detailsButtonNight"
-            }
-            onClick={(e) => handleShow(e)}
-          >
-            <FiMoreHorizontal />
-          </button>
-        </div>
-      </div>
+        </Data>
+
+        <DetailsButton
+          day={dayOrNight === "d" ? 1 : 0}
+          onClick={(e) => handleShow(e)}
+        >
+          <FiMoreHorizontal />
+        </DetailsButton>
+      </CardBody>
+
       {show ? (
         <City
           id={id}
@@ -172,15 +170,12 @@ export default function Card({
           feelsLike={feelsLike}
           humidity={humidity}
           pressure={pressure}
-          // clouds={clouds}
-          // sunrise={sunrise}
-          // sunset={sunset}
           dayOrNight={dayOrNight}
           handleShow={handleShow}
         />
       ) : (
         <></>
       )}
-    </div>
+    </Container>
   );
 }
