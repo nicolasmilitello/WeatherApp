@@ -4,13 +4,13 @@ import React from "react";
 import Card from "./Card.jsx";
 
 //? STYLES:
-import "./Cards.css";
+import { Container, InitialMessageAddCities, Logo } from "./CardsSC";
 
 export default function Cards({ cities, onClose }) {
   return (
-    <div>
+    <>
       {cities.length ? (
-        <div className="cards">
+        <Container>
           {cities.map((c) => (
             <Card
               key={c.id}
@@ -31,36 +31,13 @@ export default function Cards({ cities, onClose }) {
               onClose={() => onClose(c.id)}
             />
           ))}
-        </div>
+        </Container>
       ) : (
-        <div className="addCities">
+        <InitialMessageAddCities>
           Look for cities to add to
-          <div className="appLogo"> WeatherApp</div>
-          {/* <div className="addCitiesPart">to start.</div> */}
-        </div>
+          <Logo> WeatherApp</Logo>
+        </InitialMessageAddCities>
       )}
-    </div>
+    </>
   );
-  // <div className="cards">
-  //   {cities.map((c) => (
-  //     <Card
-  //       key={c.id}
-  //       id={c.id}
-  //       max={c.max}
-  //       min={c.min}
-  //       name={c.name}
-  //       img={c.img}
-  //       wind={c.wind}
-  //       temp={c.temp}
-  //       weather={c.weather}
-  //       feelsLike={c.feelsLike}
-  //       humidity={c.humidity}
-  //       pressure={c.pressure}
-  //       // clouds={c.clouds}
-  //       // sunrise={c.sunrise}
-  //       // sunset={c.sunset}
-  //       onClose={() => onClose(c.id)}
-  //     />
-  //   ))}
-  // </div>
 }

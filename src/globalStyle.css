@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Germania+One");
-@import url("https://fonts.googleapis.com/css?family=Barlow");
+@import url("https://fonts.googleapis.com/css?family=Barlow:600");
 
 :root {
   --logoNavColor: white;
-  --messageAddCitiesColor: black;
+  --InitialMessageAddCitiesColor: black;
   --borderColorCardsAndNav: rgba(40, 40, 40, 0.35);
   --inputFontColor: white;
   --addButtonColor: white;
   --hoverAddButton: #40ca00;
 
   --logoFont: "Germania One", sans-serif;
-  --messageAddCitiesFont: sans-serif;
-  --inputFont: "Barlow";
+  --InitialMessageAddCitiesFont: "Barlow", sans-serif;
+  --inputFont: "Barlow", sans-serif;
 }
 
 body {
