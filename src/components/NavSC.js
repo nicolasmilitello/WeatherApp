@@ -24,7 +24,7 @@ export const Container = styled.nav`
 `;
 
 export const Logo = styled.span`
-  font-family: "Germania One";
+  font-family: var(--logoFont);
   width: 50%;
   color: var(--logoNavColor);
   font-size: 25px;
