@@ -1,12 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Germania+One");
+@import url("https://fonts.googleapis.com/css?family=Barlow");
 
 :root {
   --logoNavColor: white;
   --messageAddCitiesColor: black;
   --borderColorCardsAndNav: rgba(40, 40, 40, 0.35);
+  --inputFontColor: white;
+  --addButtonColor: white;
+  --hoverAddButton: #40ca00;
 
   --logoFont: "Germania One", sans-serif;
   --messageAddCitiesFont: sans-serif;
+  --inputFont: "Barlow";
 }
 
 body {

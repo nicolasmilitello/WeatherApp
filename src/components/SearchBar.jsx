@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 //? STYLES:
-import "./SearchBar.css";
+import { SearchForm, InputCity, AddCity } from "./SearchBarSC";
 
 //? ICONS:
 import { IoMdAdd } from "react-icons/io";
@@ -16,22 +16,20 @@ export default function SearchBar({ onSearch }) {
   }
 
   return (
-    <form
-      className="searchForm"
+    <SearchForm
       onSubmit={(e) => {
         handleSubmit(city, e);
       }}
     >
-      <input
-        className="inputCity"
+      <InputCity
         type="text"
         placeholder="City..."
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
-      <button className="addCityButton" type="submit">
+      <AddCity className="addCityButton" type="submit">
         <IoMdAdd />
-      </button>
-    </form>
+      </AddCity>
+    </SearchForm>
   );
 }
