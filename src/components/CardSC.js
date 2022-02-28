@@ -18,8 +18,6 @@ export const Container = styled.div`
 `;
 
 export const Icon = styled.div`
-  // display: flex;
-  // justify-content: center;
   display: flex;
   justify-content: flex-end;
   margin-right: 8px;
@@ -29,7 +27,6 @@ export const Icon = styled.div`
 export const CloseButton = styled.button`
   position: absolute;
   margin-right: 2px;
-  // margin-top: 2px;
   box-shadow: none;
   background: none;
   background-color: none;
@@ -48,11 +45,6 @@ export const CloseButton = styled.button`
   color: var(--hoverCloseButtonCard);}`
       : `color: var(--buttonNightColor); &:hover {transition-duration: 1s;
   color: var(--hoverCloseButtonCard);}`}
-
-  &:active {
-    position: relative;
-    top: 1px;
-  }
 `;
 
 export const CardBody = styled.div`
