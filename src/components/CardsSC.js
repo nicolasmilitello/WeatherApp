@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 28px;
 `;
 
 export const InitialMessageAddCities = styled.div`

@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 //? COMPONENTS:
 import Nav from "../components/Nav.jsx";
 import Cards from "../components/Cards.jsx";
+import Footer from "../components/Footer";
 
 //? STYLES:
 import { App } from "./AppSC";
@@ -67,6 +68,7 @@ function WeatherApp() {
           render={() => <Cards cities={cities} onClose={onClose} />}
         />
       </Switch>
+      <Footer />
     </App>
   );
 }
