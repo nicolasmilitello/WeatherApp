@@ -17,7 +17,7 @@ export const Container = styled.nav`
   border-bottom: 2px var(--borderColorCardsAndNav) solid;
 
   @media screen and (max-width: 500px) {
-    height: 14vh;
+    height: 16vh;
     justify-content: center;
     flex-direction: column;
   } ;
