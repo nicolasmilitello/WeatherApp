@@ -31,7 +31,7 @@ export default function Cards({ cities, onClose }) {
         </Container>
       ) : (
         <InitialMessageAddCities>
-          Look for cities to add to
+          Pick up cities to add to
           <Logo> WeatherApp</Logo>
         </InitialMessageAddCities>
       )}
