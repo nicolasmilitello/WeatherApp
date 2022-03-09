@@ -15,10 +15,14 @@ A través de esta app se puede consultar el clima de diferentes ciudades alreded
 
 Se utlizó JavaScript, React y Styled-Components para el desarrollo.
 
+---
+
 ![ImageText](./src/img/Screenshot_01.png)
 
 ![ImageText](./src/img/Screenshot_02.png)
 
 ![ImageText](./src/img/Screenshot_03.png)
+
+---
 
 Link: https://weatherapp-nicolas-militello.vercel.app/
