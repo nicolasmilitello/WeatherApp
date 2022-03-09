@@ -19,7 +19,7 @@ function Footer() {
 
       <CreditsContainer>
         <Credits>Powered by OpenWeather API.</Credits>
-        <Credits>Designed by Nicolas Militello.</Credits>
+        <Credits>Developed by Nicolas Militello.</Credits>
       </CreditsContainer>
     </Container>
   );
